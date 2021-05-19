@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/******************************************* Navbar styles ************************************************/
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+}
+.page-heading {
+  color: white;
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+/*************************************** Layout styles *****************************************************/
+.sidebar {
+  grid-area: menu;
+  background-color: #f4f4f4;
+}
+.mails-list {
+  grid-area: main;
+  width: 600px;
+  padding: 10px;
+  border-right: 2px solid #f4f4f4;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.mail-view {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main right right right"
+    "menu footer footer footer footer footer";
+}
+
+.app-layout > div {
+  font-size: 19px;
+  height: 87.6vh;
+}
+.heading {
+  font-size: 22px;
+}
+.mail-types-navigation-list {
+  list-style-type: none;
+}
+
+.mail-types-navigation-list > li {
+  margin-top: 13px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.active {
+  background-color: #c6e0f5;
+  padding: 10px;
+}
+
+.mail-types-navigation-list > li:hover {
+  color: #2c75dc;
+}
+.search-bar {
+  height: 50px;
+  width: 100%;
+  background-color: #deecfa;
+}
+.search-input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.search-input::placeholder {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.search-input:focus {
+  border: none;
+}
+.sidebar-menu {
+  padding-left: 30px;
+}
+.subject {
+  color: #2c75dc;
+  font-weight: bold;
+}
+.mail-id {
+  font-size: 22px;
+}
+.mail-card > div {
+  margin-top: 8px;
+}
+.mail-card {
+  margin-bottom: 10px;
+  display: flex;
+}
+.unread {
+  border-left: 4px solid #2f86db;
+  margin-right: 13px;
+}
+.content-preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 600px;
+  color: grey;
+}
+.empty-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin-right: 130px;
+}
+.mail-viewer {
+  padding: 20px;
+}
