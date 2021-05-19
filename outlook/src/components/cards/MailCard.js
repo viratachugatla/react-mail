@@ -1,6 +1,8 @@
 import React from "react";
 
 function MailCard(props) {
+  const [flag, setFlag] = React.useState([]);
+
   return (
     <div>
       <div

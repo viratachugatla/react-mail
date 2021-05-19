@@ -10,6 +10,7 @@ function App() {
   const [activeType, setActiveType] = React.useState("Inbox");
   const [data, setData] = React.useState([]);
   const [activeMailId, setActiveMailId] = React.useState("");
+  const [flaggedMails, setFlaggedMails] = React.useState([]);
   const inbox = [
     {
       mId: "guid-1",
@@ -132,7 +133,7 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="app-layout">
-        <div class="sidebar">
+        <div className="sidebar">
           <AppsideBar
             inboxUnread={inboxUnread}
             spamUnread={spamUnread}
@@ -141,14 +142,15 @@ function App() {
             setActiveType={setActiveType}
           />
         </div>
-        <div class="mails-list">
+        <div className="mails-list">
           <MailList
+            setFlaggedMails={setFlaggedMails}
             setActiveMailId={setActiveMailId}
             data={data}
             activeType={activeType}
           />
         </div>
-        <div class="mail-view">
+        <div className="mail-view">
           <MailView data={data} activeMailId={activeMailId} />
         </div>
       </div>
